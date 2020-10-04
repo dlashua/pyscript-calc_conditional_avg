@@ -65,3 +65,5 @@ pyscript:
           - condition: binary_sensor.room2_occupied
             entity: sensor.room2_temperature
 ```
+
+### Reload PyScript
