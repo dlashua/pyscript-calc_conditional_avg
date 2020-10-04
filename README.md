@@ -10,7 +10,9 @@ A use case for this would be to calculate the average temperature of any occupie
 
 This works as an "app" in `pyscript`. Therefore, pyscript is required and configuration is done through Home Assistant's `configuration.yaml` file.
 
-You can see a [full configuration example](config.sample.yaml) in this repository. These are the configuration keys:
+You can see a [full configuration example](config.sample.yaml) in this repository.
+
+These are the configuration keys:
 
 key | description | example | default
 --- | --- | --- | ---
@@ -20,6 +22,8 @@ friendly_name (optional) | the human readable name for this sensor | Conditional
 precision (optional) | the number of decimal places the result should be rounded to | 1 | 0
 conditions (required) | a list of conditions | see below | No Default
 
+  \
+  \
 Each Condition Should have the following keys:
 key | description | example | default
 --- | --- | --- | ---
