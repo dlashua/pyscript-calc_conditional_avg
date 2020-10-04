@@ -1,0 +1,28 @@
+pyscript:
+  apps:
+    calc_conditional_avg:
+      - entity_id: sensor.avg_occupied_temperature
+        unit_of_measurement: "°F"
+        friendly_name: Avg Occupied Temperature
+        precision: 1
+        conditions:
+          - condition: binary_sensor.room1_occupied
+            entity: sensor.room1_temperature
+          - condition: binary_sensor.room2_occupied
+            entity: sensor.room2_temperature
+
+# OR
+pyscript:
+  apps:
+    calc_conditional_avg: {}
+  apps_list:
+    - app: calc_conditional_avg
+      entity_id: sensor.avg_occupied_temperature
+      unit_of_measurement: "°F"
+      friendly_name: Avg Occupied Temperature
+      precision: 1
+      conditions:
+        - condition: binary_sensor.room1_occupied
+          entity: sensor.room1_temperature
+        - condition: binary_sensor.room2_occupied
+          entity: sensor.room2_temperature
