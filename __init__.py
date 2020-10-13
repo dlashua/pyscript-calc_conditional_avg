@@ -56,7 +56,6 @@ def calc_conditional_avg(**data):
 registered_triggers = []
 
 def register_calc_conditional_avg(data):
-    log.error(f'loading calc_conditional_avg for {data["entity_id"]}')
     conditions = list(data['conditions'])
 
     watch_entities = []
