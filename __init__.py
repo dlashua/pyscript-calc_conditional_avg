@@ -100,5 +100,7 @@ def load_app_list(app_name, factory):
 ##########
 # Startup
 ##########
-load_app('calc_conditional_avg', register_calc_conditional_avg)
-load_app_list('calc_conditional_avg', register_calc_conditional_avg)
+@time_trigger('startup')
+def load():
+    load_app('calc_conditional_avg', register_calc_conditional_avg)
+    load_app_list('calc_conditional_avg', register_calc_conditional_avg)
